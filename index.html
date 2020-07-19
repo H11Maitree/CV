@@ -43,7 +43,7 @@
         .column {
             float: left;
             padding: 0px;
-            
+
             /* Should be removed. Only for demonstration */
         }
 
@@ -55,12 +55,14 @@
         .left h1,
         .left p,
         .left h2,
-        .left ul {
+        .left ul,
+        .left h3 {
             color: #ffffff;
         }
 
         h1,
         h2,
+        h3,
         p,
         h4 {
             padding-left: 15px;
@@ -89,13 +91,32 @@
             clear: both;
         }
 
-        img {
+        #ProfilePic {
             display: block;
             margin-left: auto;
             margin-right: auto;
             max-width: 75%;
             border-radius: 50%;
         }
+
+        #printOnly {
+            display: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media print {
+            #printOnly {
+                display: block;
+            }
+        }
+        #link
+{
+   color:black;
+   text-decoration: none; 
+   background-color: none;
+}
+
     </style>
 </head>
 
@@ -105,7 +126,7 @@
             <br>
             <h1>Maitree Hirunteeyakul</h1>
             <br>
-            <img src="profile.png" alt="Avatar">
+            <img id="ProfilePic" src="profile.png" >
             <br>
             <h2>Education</h2>
             <ul>
@@ -124,35 +145,82 @@
                 <li>GitHub<br>H11Maitree</li>
                 <li>StackOverflow<br>maitree-hirunteeyakun</li>
             </ul>
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div >
+              <h3>View this CV Online</h3>
+            <img src="qr.png" id="printOnly">
+            </div>
 
         </div>
         <div class="column right" style="background-color:white;">
             <br>
             <h2>Projects</h2>
             <ul>
-                <li>Pool Usage prediction on live weather
-                    <br>Using linear regression model associate with Openweather API for predicting number of people in Mahidol Wittayanusorn School's pool. Updating result real time on our website.
-                    <br>TIME https://medium.com/@Mattjunk/does-people-really-decide-to-go-to-the-pool-by-climate-and-predication-5e8a148ff46c
+                <li><a href="https://medium.com/@Mattjunk/does-people-really-decide-to-go-to-the-pool-by-climate-and-predication-5e8a148ff46c" id="link">Pool Usage prediction on live weather</a>
+                    <br>Using linear regression model associate with Openweather API for predicting number of people in
+                    Mahidol Wittayanusorn School's pool. Updating result real time on <a href="http://poolg4.herokuapp.com">our website</a>.
+                    <br>Nov 2019 - Feb 2020
+                    <br><button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Python</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Flask</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Linear regression</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">OpenWeather API</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">HTML5</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">CSS</button>
                 </li>
                 <li>Thai Chilli Classification Machine
-                    <br>STEM Charllege to claasify qulity of each chilli using image processing. We use MLmodel with python for predictation before sending the action to Arduino and servo via Serial Signal.
+                    <br>STEM Charllege to claasify qulity of each chilli using image processing. We use MLmodel with
+                    python for predictation before sending the action to Arduino and servo via Serial Signal.
                     <br>Role : MLmodel creator, Python and Arduino Coder.
                     <br>TIME
+                    <br><button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Python</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Arduino IDE</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">MLmodel</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Image Processing</button>
                 </li>
                 <li>Study of sound wave which speaker hear themselfs
-                    <br>Simulating 3D Sound dome thought Human tissue on Python. Creating iOS app as a sound equlizer collegting statistical experiment result from real human. Using Google Cloud Firestore for Backend Storage.
+                    <br>Simulating 3D Sound dome thought Human tissue on Python. Creating iOS app as a sound equlizer
+                    collegting statistical experiment result from real human. Using Google Cloud Firestore for Backend
+                    Storage.
                     <br>Role : iOS Dev, Firebase Administrator, Python Coder
                     <br>TIME
+                    <br><button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Python</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Swift</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">iOS</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Firestore</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">i-Simpa</button>
                 </li>
                 <li>Kibo Robot Programming
-                    <br>Programming the Kibo Flying Robot (Andriod) for fixing the space door lock in simulated ISS. Using NASA astrobee_android API https://github.com/nasa/astrobee_android.
+                    <br>Programming the Kibo Flying Robot (Andriod) for fixing the space door lock in simulated ISS.
+                    Using NASA astrobee_android API https://github.com/nasa/astrobee_android.
                     <br>1 of 20 Finalist in Thailand
                     <br>TIME
+                    <br><button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Java</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Andriod</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Zxing</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">CV2</button>
                 </li>
                 <li>Face Reconization for MWITS
-                    <br>Using Microsoft Azure Face API for identificat student and teacher in Mahidol Wittayanusorn School. <br>Creating internal API for future usage. Creating Line Chat Bot for quick identification from photo. Planing to migrath the system to school's electronic library gate.
-                    <br>1 of 20 Finalist in Thailand
+                    <br>Using Microsoft Azure Face API for identificat student and teacher in Mahidol Wittayanusorn
+                    School. <br>Creating internal API for future usage. Creating Line Chat Bot for quick identification
+                    from photo. Planing to migrath the system to school's electronic library gate.
                     <br>TIME
+                    <br><button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Python</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Flask</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Microsoft Azure</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">PostgreSQL</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Line Messaging API</button>
                 </li>
             </ul>
 
@@ -165,13 +233,17 @@
                     <br>Certificate ID : <a
                         href="https://courses.edx.org/certificates/8f765396ff1f4e729dd6027a00fdd1cbIssued">8f765396ff1f4e729dd6027a00fdd1cb</a>
                     Issue Date : Aug 2019<br>
-                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Primary</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Python</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Jupyter notebooks</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Pandas</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Numpy</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Git</button>
                 </li>
                 <li>Introduction to Blockchain Technologies (coursera)
                     <br>an online non-credit course authorized by INSEAD and offered through Coursera
                     <br>Certificate ID : <a href="https://coursera.org/verify/L3V859NQCXQH">L3V859NQCXQH</a> Issue Date
                     : Apr 2020<br>
-                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Primary</button>
+                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Blockchain</button>
                 </li>
                 <li>HKS101A_3: Citizen Politics in America: Public Opinion, Elections, Interest Groups, and the Media
                     (edX)
@@ -179,7 +251,6 @@
                     <br>Certificate ID : <a
                         href="https://courses.edx.org/certificates/b1dd0a1814c74e7f8c87186bfeecefae">b1dd0a1814c74e7f8c87186bfeecefae</a>
                     Issue Date : Apr 2020<br>
-                    <button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Primary</button>
                 </li>
             </ul>
 
@@ -198,7 +269,7 @@
                     <br>Apr 2019 - May 2019
                 </li>
             </ul>
-                
+
 
             <h2>Standardised Examination Scores</h2>
             <ul>
@@ -210,9 +281,10 @@
             <h2>Honors & Awards</h2>
             <ul>
                 <li>Bronze Medal - TOI13 Thailand Olympiad in Informatics
-                    <br>Participant from Suranaree University of Technology 
+                    <br>Participant from Suranaree University of Technology
                     <br>Hosted by Mahidol Wittayanusorn School and ICT Mahidol University
                     <br>June 2017
+                    <br><button type="button" class="btn btn-outline-primary btn-rounded waves-effect">C/C++</button>
                 </li>
                 <li>Bronze Medal - IMSO12 International Mathematics and Science Olympiad for Primary School
                     <br>Representative of Thailand
