@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maitree's Resume</title>
 
+    
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
@@ -120,7 +121,26 @@
             background-color: #F3F5F6;
             padding: 0 10px;
         }
+        
+        
+        @media (max-width: 800px) {
+            .hideonmobile{
+                display: none;
+            }
+            .Volunteer{
+                display:inline-block;
 
+            }
+        }
+
+        @media print,(min-width: 800px){
+            .hideonmobile{
+                display: inline;
+            }
+            .Volunteer{
+                display: flex;
+                width: 100%;
+            }
         /* .Institution h3,
         .Institution p {
             display: inline;
@@ -216,6 +236,9 @@
 
         }
 
+        .Experiencerow:after,
+        .Awardrow:after,
+        .Certificationrow:after,
         .Institutionrow:after,
         .row:after {
             content: "";
@@ -237,7 +260,7 @@
             text-align: center;
             width: 30%;
         }
-
+    }
         .ProjectDescription * {
             display: inline;
         }
@@ -247,6 +270,7 @@
             clear: both;
             padding-left: 12px;
         }
+    
     </style>
 </head>
 
@@ -276,6 +300,17 @@
                     <span class="fa fa-github" style="font-size:24px"></span>
                     &nbsp;@H11Maitree
                 </p>
+                <p style="display: inline;">
+                <span class="material-symbols-outlined">
+                    code
+                    </span>
+                    <p class="code">Python</p>,
+                    <p class="code">HTML</p>,
+                    <p class="code">JavaScript</p>,
+                    <p class="code">C/C++</p>,
+                    <p class="code">Swift</p>,
+                    <p class="code">Java</p>
+                </p>
             </div>
 
         </div>
@@ -283,7 +318,7 @@
             <p class="vertical_text">Scan for detailed </p>
             <p class="vertical_text">CV, FAQ and more</p>
             <p class="vertical_text codegray">&lt;m41hieu.com&gt;</p>
-            <img src="QR_Face L SQ.png" alt="m41hieu.com" width="150" height="150">
+            <img src="QR_Face L SQ.png" alt="m41hieu.com" width="170" height="170">
         </div>
 
     </div>
@@ -324,7 +359,7 @@
                 <p>GPAX: 3.62 (Out of 4.0)</p>
             </div>
             <div class="column">
-                <p>Montreal, Canada</p>
+                <p class="country">Montreal, Canada</p>
             </div>
         </div>
     </div>
@@ -354,7 +389,7 @@
             <div class="column">
                 <p>Aug - Sep 2020</p>
             </div>
-            <div class="column">
+            <div class="column hideonmobile">
                 <p>&nbsp;</p>
             </div>
             <div class="column">
@@ -387,7 +422,7 @@
             <div class="column">
                 <p>Jun - Jul 2022</p>
             </div>
-            <div class="column">
+            <div class="column hideonmobile">
                 <p>&nbsp;</p>
             </div>
             <div class="column">
@@ -640,14 +675,14 @@
     <div style="margin: 6px;">
         <div class="Certificationrow">
             <h3 class="Certificationcolumn">English Higher Intermidiate CERF B2</h3>
-            <p class="Certificationcolumn">&nbsp;</p>
+            <p class="Certificationcolumn hideonmobile">&nbsp;</p>
             <p class="Certificationcolumn">Kaplan </p>
         </div>
         <div class="Grade row">
             <div class="column">
                 <p>Jul 2021</p>
             </div>
-            <div class="column">
+            <div class="column hideonmobile">
                 <p>&nbsp;</p>
             </div>
             <div class="column">
@@ -670,14 +705,14 @@
     <div style="margin: 6px;">
         <div class="Certificationrow">
             <h3 class="Certificationcolumn">Introduction to Blockchain Technologies</h3>
-            <p class="Certificationcolumn">&nbsp;</p>
+            <p class="Certificationcolumn hideonmobile">&nbsp;</p>
             <p class="Certificationcolumn">INSEAD, Coursera</p>
         </div>
         <div class="Grade row">
             <div class="column">
                 <p>Apr 2020</p>
             </div>
-            <div class="column">
+            <div class="column hideonmobile">
                 <p>&nbsp;</p>
             </div>
             <div class="column">
@@ -729,7 +764,7 @@
         </div>
     </div>
     <div style="padding: 2px;"></div>
-    <div style="margin: 6px; display: flex;">
+    <div style="margin: 6px;" class="Volunteer">
         <h3>&#x2022; Microsoft Student Partners</h3><p>, Thailand - 2020 &nbsp;&nbsp;&nbsp;</p>
         <h3>&#x2022; SSMU WALKSAFE</h3><p>, Montreal, Canada - 2022</p>
     </div>
